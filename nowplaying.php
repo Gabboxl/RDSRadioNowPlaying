@@ -2,6 +2,7 @@
 
 function nowPlaying($returnvariable = null)
 {
+    //from https://github.com/Gabboxl/RDSRadio
     $url = 'https://icstream.rds.radio/status-json.xsl';  //vekkio http://stream1.rds.it:8000/status-json.xsl
     $jsonroba = file_get_contents($url);
     $jsonclear = json_decode($jsonroba, true);
