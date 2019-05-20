@@ -8,8 +8,6 @@ function nowPlaying($returnvariable = null)
     $jsonclear = json_decode($jsonroba, true);
     $metadata = explode('*', $jsonclear['icestats']['source'][15]['title']);
 
-    //anti-floodwait
-    file_put_contents('testmoseca.php', $jsonclear['icestats']['source'][15]['title']);
     if ($returnvariable == 'jsonclear') {
         return $jsonclear['icestats']['source'][15]['title'];
     }
